@@ -2,14 +2,14 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
 #
-/ADG_Textures/
-/[Ll]ibrary/
-/[Tt]emp/
-/[Oo]bj/
-/[Bb]uild/
-/[Bb]uilds/
-/[Ll]ogs/
-/[Uu]ser[Ss]ettings/
+/New Unity Project/ADG_Textures/
+/New Unity Project/[Ll]ibrary/
+/New Unity Project/[Tt]emp/
+/New Unity Project/[Oo]bj/
+/New Unity Project/[Bb]uild/
+/New Unity Project/[Bb]uilds/
+/New Unity Project/[Ll]ogs/
+/New Unity Project/[Uu]ser[Ss]ettings/
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
