@@ -8,10 +8,7 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
 
     // Start is called before the first frame update
-    void Start()
-    {
-        animator = GetComponent<Animator>();
-    }
+    void Start() => animator = GetComponent<Animator>();
 
     // Update is called once per frame
     void Update()
@@ -22,32 +19,15 @@ public class PlayerController : MonoBehaviour
         Vector3 movementDirection = new Vector3(-horizontalInput, 0, -verticalInput);
         movementDirection.Normalize();
 
-        Vector3 movement = new Vector3(0.0f, verticalInput, horizontalInput);
+        bool isMoving = horizontalInput != 0 || verticalInput != 0;
 
-        if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.S))
-        {
-            if (animator != null)
-            {
-                animator.SetBool("IsRunning", false);
-            }
-        }
-
-        //Rigidbody rb = GetComponent<Rigidbody>();
-        //GetComponent<Rigidbody>().velocity = movement * movementSpeed;
-
-        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.S))
-        {
-                    if(animator!=null)
-            {
-                animator.SetBool("IsRunning", true);
-            }
+        if(animator != null)
+            animator.SetBool("IsRunning", isMoving);
+         
+        if (isMoving)
             transform.Translate(Vector3.forward * movementSpeed);
-        }
-
 
         if (movementDirection != Vector3.zero)
-        {
             transform.forward = movementDirection;
-        }
     }
 }
