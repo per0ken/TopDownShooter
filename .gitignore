@@ -2,6 +2,7 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
 #
+
 /New Unity Project/[Ll]ibrary/
 /New Unity Project/[Tt]emp/
 /New Unity Project/[Oo]bj/
