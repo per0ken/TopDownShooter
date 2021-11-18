@@ -522,6 +522,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 134387855}
     m_Modifications:
+    - target: {fileID: 2390293500873627629, guid: 140bc3e2f36f2b841bb373e489846129, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2390293500873627629, guid: 140bc3e2f36f2b841bb373e489846129, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4714724134534950025, guid: 140bc3e2f36f2b841bb373e489846129, type: 3}
       propertyPath: m_Name
       value: lava (1)
@@ -692,7 +700,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.06625338}
+  m_Offset: {x: 0.009788714, y: 0.0055304915}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -703,7 +711,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.19, y: 0.16749325}
+  m_Size: {x: 0.20957743, y: 0.311061}
   m_EdgeRadius: 0
 --- !u!1001 &1466879823
 PrefabInstance:
@@ -2993,7 +3001,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -8512013893729772630, guid: 140bc3e2f36f2b841bb373e489846129, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 140bc3e2f36f2b841bb373e489846129, type: 3}
 --- !u!4 &3737040580728559212 stripped
 Transform:
