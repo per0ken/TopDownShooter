@@ -15,11 +15,11 @@ G:/Unity/Top Down Shooter
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-56048
+49763
 Successfully changed project path to: G:/Unity/Top Down Shooter
 G:/Unity/Top Down Shooter
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 54.04 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 66.67 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.22f1 (e1a7f79fd887)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.22f1/Editor/Data/Resources/UnitySubsystems
@@ -35,89 +35,89 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.22f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.22f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.22f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56468
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56960
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.22f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001953 seconds.
+Registered in 0.001513 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 52.59 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 62.84 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.224 seconds
+- Completed reload, in  0.973 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1225ms)
-		BeginReloadAssembly (60ms)
+	ReloadAssembly (973ms)
+		BeginReloadAssembly (48ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (489ms)
-			LoadAssemblies (56ms)
+		EndReloadAssembly (432ms)
+			LoadAssemblies (47ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (165ms)
+			SetupTypeCache (139ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (31ms)
-			SetupLoadedEditorAssemblies (191ms)
+			RebuildScriptCaches (28ms)
+			SetupLoadedEditorAssemblies (178ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (4ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (53ms)
-				BeforeProcessingInitializeOnLoad (16ms)
-				ProcessInitializeOnLoadAttributes (88ms)
-				ProcessInitializeOnLoadMethodAttributes (30ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (63ms)
+				BeforeProcessingInitializeOnLoad (13ms)
+				ProcessInitializeOnLoadAttributes (73ms)
+				ProcessInitializeOnLoadMethodAttributes (26ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.003940 seconds.
+Registered in 0.002613 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 54.82 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 63.06 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.280 seconds
+- Completed reload, in  1.043 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1281ms)
-		BeginReloadAssembly (152ms)
+	ReloadAssembly (1043ms)
+		BeginReloadAssembly (129ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
+			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (19ms)
-		EndReloadAssembly (1053ms)
-			LoadAssemblies (97ms)
+			CreateAndSetChildDomain (15ms)
+		EndReloadAssembly (859ms)
+			LoadAssemblies (79ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (340ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (50ms)
-			SetupLoadedEditorAssemblies (441ms)
+			SetupTypeCache (278ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (43ms)
+			SetupLoadedEditorAssemblies (344ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (4ms)
+				InitializePlatformSupportModulesInManaged (3ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (55ms)
-				BeforeProcessingInitializeOnLoad (82ms)
-				ProcessInitializeOnLoadAttributes (271ms)
-				ProcessInitializeOnLoadMethodAttributes (20ms)
-				AfterProcessingInitializeOnLoad (8ms)
+				RefreshPlugins (63ms)
+				BeforeProcessingInitializeOnLoad (66ms)
+				ProcessInitializeOnLoadAttributes (191ms)
+				ProcessInitializeOnLoadMethodAttributes (15ms)
+				AfterProcessingInitializeOnLoad (5ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (7ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
-Refreshing native plugins compatible for Editor in 0.52 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 0.67 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2182 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 95.4 MB.
-System memory in use after: 95.5 MB.
+System memory in use before: 97.6 MB.
+System memory in use after: 97.7 MB.
 
 Unloading 28 unused Assets to reduce memory usage. Loaded Objects now: 2615.
-Total: 3.293500 ms (FindLiveObjects: 0.168000 ms CreateObjectMapping: 0.076300 ms MarkObjects: 2.976900 ms  DeleteObjects: 0.071200 ms)
+Total: 3.026100 ms (FindLiveObjects: 0.166600 ms CreateObjectMapping: 0.084900 ms MarkObjects: 2.719500 ms  DeleteObjects: 0.054100 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -131,41 +131,536 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/Palettes/Sprites/terrain_3.png
-  artifactKey: Guid(5186e57da0afe4642aa552cefedd1c80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palettes/Sprites/terrain_3.png using Guid(5186e57da0afe4642aa552cefedd1c80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42981d568320c14e993b5d2329851455') in 0.327441 seconds 
-  Import took 0.330704 seconds .
+  path: Assets/Tiles/portaa_9.asset
+  artifactKey: Guid(f469a6c93ec465141bd5ac057232c624) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/portaa_9.asset using Guid(f469a6c93ec465141bd5ac057232c624) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02be0d0b509092b9b0bf01ef4fd1d065') in 0.034057 seconds 
+  Import took 0.037219 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 8.208347 seconds.
-  path: Assets/Palettes/Sprites/terrain_3.png
-  artifactKey: Guid(5186e57da0afe4642aa552cefedd1c80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palettes/Sprites/terrain_3.png using Guid(5186e57da0afe4642aa552cefedd1c80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ceb2e31a813018cf99efefa81a4c576') in 0.029691 seconds 
-  Import took 0.032859 seconds .
+  Time since last request: 0.000269 seconds.
+  path: Assets/Tiles/portaa_5.asset
+  artifactKey: Guid(6de96227d9cbe8643be3d78d5a95e16c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/portaa_5.asset using Guid(6de96227d9cbe8643be3d78d5a95e16c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52867a6be38c6cff1f9772ee05acee7d') in 0.006427 seconds 
+  Import took 0.009664 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 5.700221 seconds.
-  path: Assets/Palettes/Sprites/terrain_3.png
-  artifactKey: Guid(5186e57da0afe4642aa552cefedd1c80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palettes/Sprites/terrain_3.png using Guid(5186e57da0afe4642aa552cefedd1c80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '199f8303114a359104fcaae6aa819cfa') in 0.014926 seconds 
-  Import took 0.019537 seconds .
+  Time since last request: 0.000240 seconds.
+  path: Assets/Tiles/portaa_3.asset
+  artifactKey: Guid(c293f6199bd2197459b192683d03807d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/portaa_3.asset using Guid(c293f6199bd2197459b192683d03807d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73ecc7b3106b8d37959b760d302605eb') in 0.006748 seconds 
+  Import took 0.010085 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 26.648294 seconds.
-  path: Assets/Palettes/Sprites/terrain_3.png
-  artifactKey: Guid(5186e57da0afe4642aa552cefedd1c80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palettes/Sprites/terrain_3.png using Guid(5186e57da0afe4642aa552cefedd1c80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3491c3ac847b23f0ffb8d978b477e59c') in 0.473097 seconds 
-  Import took 0.477122 seconds .
+  Time since last request: 0.000170 seconds.
+  path: Assets/Tiles/portaa_10.asset
+  artifactKey: Guid(9d35d3c27728db041b223bf3f20ad12a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/portaa_10.asset using Guid(9d35d3c27728db041b223bf3f20ad12a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d35f74ba3702e51d19c0f7430a9b962') in 0.006654 seconds 
+  Import took 0.009929 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 125.024297 seconds.
-  path: Assets/Palettes/Sprites/terrain_3.png
-  artifactKey: Guid(5186e57da0afe4642aa552cefedd1c80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Palettes/Sprites/terrain_3.png using Guid(5186e57da0afe4642aa552cefedd1c80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ebf3af513980cc328239839175b5316') in 5.457115 seconds 
-  Import took 5.500133 seconds .
+  Time since last request: 0.000180 seconds.
+  path: Assets/Tiles/portaa_8.asset
+  artifactKey: Guid(cd82e3e62e6eda24e8d6715504be00c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/portaa_8.asset using Guid(cd82e3e62e6eda24e8d6715504be00c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eeab7b1fc9861658ea99093caa21037f') in 0.006612 seconds 
+  Import took 0.009741 seconds .
 
-AssetImportWorkerClient::OnTransportError - code=2 error=End of file
+========================================================================
+Received Import Request.
+  Time since last request: 0.000260 seconds.
+  path: Assets/Tiles/portaa_7.asset
+  artifactKey: Guid(778f22f2ffcb1ee4f84d4d2a11420a23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/portaa_7.asset using Guid(778f22f2ffcb1ee4f84d4d2a11420a23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a2ce2ce8d85ef480959c05add280fa9') in 0.006635 seconds 
+  Import took 0.009990 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000235 seconds.
+  path: Assets/ShooterSpritePack/Prefabs/SoldierCover.prefab
+  artifactKey: Guid(cf933abc45fc81843a61c7ca70114e9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShooterSpritePack/Prefabs/SoldierCover.prefab using Guid(cf933abc45fc81843a61c7ca70114e9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca92f8056c045acb769152158641b8a7') in 0.063836 seconds 
+  Import took 0.067200 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000203 seconds.
+  path: Assets/ShooterSpritePack/Prefabs/SoldierLean.prefab
+  artifactKey: Guid(ada510be92f323c4a88fc864007f0621) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShooterSpritePack/Prefabs/SoldierLean.prefab using Guid(ada510be92f323c4a88fc864007f0621) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '493d50ab41891e92c51f48f582c8845e') in 0.010329 seconds 
+  Import took 0.013620 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000186 seconds.
+  path: Assets/Tiles/portaa_6.asset
+  artifactKey: Guid(0a7e00cee7679e44ab5ef1b49f3ca2d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/portaa_6.asset using Guid(0a7e00cee7679e44ab5ef1b49f3ca2d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '077f11d797736e3a82fecb3a27a6927e') in 0.006864 seconds 
+  Import took 0.010225 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000175 seconds.
+  path: Assets/ShooterSpritePack/Prefabs
+  artifactKey: Guid(29e4b8357d8a4f448a1dce151aa91195) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShooterSpritePack/Prefabs using Guid(29e4b8357d8a4f448a1dce151aa91195) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c363d78d1ce6d21c3f3289bc349acb2') in 0.004770 seconds 
+  Import took 0.008184 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000292 seconds.
+  path: Assets/ShooterSpritePack/Prefabs/SoldierWalk.prefab
+  artifactKey: Guid(816ec972959427243845c4776a0a7dea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShooterSpritePack/Prefabs/SoldierWalk.prefab using Guid(816ec972959427243845c4776a0a7dea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3da4462793c3760729fab344317a4527') in 0.011442 seconds 
+  Import took 0.014935 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000209 seconds.
+  path: Assets/ShooterSpritePack/Prefabs/SoldierExplode.prefab
+  artifactKey: Guid(77a1482e2f5b2c64bbfe7e9ceb9aeb2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShooterSpritePack/Prefabs/SoldierExplode.prefab using Guid(77a1482e2f5b2c64bbfe7e9ceb9aeb2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b46c555745e1305345762dfbcd14009') in 0.010996 seconds 
+  Import took 0.014408 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000193 seconds.
+  path: Assets/Tiles/portaa_1.asset
+  artifactKey: Guid(029a9aa2646e17a47bcec0453821be80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/portaa_1.asset using Guid(029a9aa2646e17a47bcec0453821be80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ffc62ba8d9ed2d5440037b1124c9d76') in 0.006607 seconds 
+  Import took 0.009973 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000190 seconds.
+  path: Assets/Tiles/portaa_13.asset
+  artifactKey: Guid(23d1251caf0d05449a8f687cbc815803) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/portaa_13.asset using Guid(23d1251caf0d05449a8f687cbc815803) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4752687d3011dc81cf44ae2f7cd1df63') in 0.006429 seconds 
+  Import took 0.009994 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000216 seconds.
+  path: Assets/Tiles/portaa_2.asset
+  artifactKey: Guid(5d2dcd2c46848e54183f9ff27f461ed9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/portaa_2.asset using Guid(5d2dcd2c46848e54183f9ff27f461ed9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a51053dd574187d437a77c2b07718773') in 0.006641 seconds 
+  Import took 0.009986 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000211 seconds.
+  path: Assets/Tiles/portaa_14.asset
+  artifactKey: Guid(ddfded753af737b47a128395e9dd3d79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/portaa_14.asset using Guid(ddfded753af737b47a128395e9dd3d79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16e6dbf23a0e5340f9b47fed1be03737') in 0.006595 seconds 
+  Import took 0.010015 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000185 seconds.
+  path: Assets/Tiles/portaa_12.asset
+  artifactKey: Guid(4048893fea6035b4b80a63ab148c1d7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/portaa_12.asset using Guid(4048893fea6035b4b80a63ab148c1d7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd245f8477bb442d241dc1eb2cfc51705') in 0.006555 seconds 
+  Import took 0.009905 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000179 seconds.
+  path: Assets/Tiles/portaa_4.asset
+  artifactKey: Guid(306b5d550feea1a4b9164696283b2f1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/portaa_4.asset using Guid(306b5d550feea1a4b9164696283b2f1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd8025a70fd2f7194494372c5d9ea44a') in 0.007405 seconds 
+  Import took 0.010814 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000238 seconds.
+  path: Assets/Tiles/portaa_0.asset
+  artifactKey: Guid(1e6cdfeb4c029d24d968355a5f1acee5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/portaa_0.asset using Guid(1e6cdfeb4c029d24d968355a5f1acee5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1659878f54b38017589857e748421db7') in 0.006991 seconds 
+  Import took 0.010406 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000194 seconds.
+  path: Assets/Tiles/portaa_11.asset
+  artifactKey: Guid(7923020f7204d95449f49b1231df8d62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tiles/portaa_11.asset using Guid(7923020f7204d95449f49b1231df8d62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf56138a93ad0f766943c75125dd31fd') in 0.006302 seconds 
+  Import took 0.017939 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000230 seconds.
+  path: Assets/ShooterSpritePack/Prefabs/SoldierProne.prefab
+  artifactKey: Guid(13e049b898efa0a4c878a3cf7f55150e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShooterSpritePack/Prefabs/SoldierProne.prefab using Guid(13e049b898efa0a4c878a3cf7f55150e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '014ad2cd9bb5bbb98931a9af1ea9dca4') in 0.011098 seconds 
+  Import took 0.014353 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000244 seconds.
+  path: Assets/ShooterSpritePack/Prefabs/SoldierDeath.prefab
+  artifactKey: Guid(7376db443f9d6b148a482427a30fc6b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShooterSpritePack/Prefabs/SoldierDeath.prefab using Guid(7376db443f9d6b148a482427a30fc6b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'beb543f867f388cd88d9c48f23bc3cb1') in 0.010115 seconds 
+  Import took 0.013492 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000175 seconds.
+  path: Assets/ShooterSpritePack/Prefabs/SoldierRun.prefab
+  artifactKey: Guid(f882787480dd40f4ca94b6a421dd0a05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShooterSpritePack/Prefabs/SoldierRun.prefab using Guid(f882787480dd40f4ca94b6a421dd0a05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d9f1fae09ca538cab783cfca450c054') in 0.010557 seconds 
+  Import took 0.014003 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 96.512079 seconds.
+  path: Assets/ShooterSpritePack/Prefabs/SoldierLean.prefab
+  artifactKey: Guid(ada510be92f323c4a88fc864007f0621) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShooterSpritePack/Prefabs/SoldierLean.prefab using Guid(ada510be92f323c4a88fc864007f0621) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23c6af6603220fdb30545d7afb36fbda') in 0.007936 seconds 
+  Import took 0.011609 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 45.565053 seconds.
+  path: Assets/ShooterSpritePack/Sprites/PlayerDeath/SoldierDeath1.png
+  artifactKey: Guid(181652610142e3b4ab7aa619e6baab97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShooterSpritePack/Sprites/PlayerDeath/SoldierDeath1.png using Guid(181652610142e3b4ab7aa619e6baab97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '419a163b9cbec51b4fd2b17373f53a2c') in 0.032750 seconds 
+  Import took 0.036751 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.887452 seconds.
+  path: Assets/ShooterSpritePack/Sprites/PlayerDeath/SoldierDeath0.png
+  artifactKey: Guid(85984bd487ae86642a9c5b1447c2904c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShooterSpritePack/Sprites/PlayerDeath/SoldierDeath0.png using Guid(85984bd487ae86642a9c5b1447c2904c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e654e531e02c32f55b3e2eb8c4210712') in 0.011082 seconds 
+  Import took 0.014326 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000155 seconds.
+  path: Assets/ShooterSpritePack/Sprites/PlayerDeath/SoldierDeath3.png
+  artifactKey: Guid(197f1c2a0ca5c8945bafec5af05be128) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShooterSpritePack/Sprites/PlayerDeath/SoldierDeath3.png using Guid(197f1c2a0ca5c8945bafec5af05be128) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '026f8e4030931f9ef02d655bcc4b76c6') in 0.012945 seconds 
+  Import took 0.016291 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000188 seconds.
+  path: Assets/ShooterSpritePack/Sprites/PlayerDeath/SoldierDeath7.png
+  artifactKey: Guid(13bb546ba37a9bf4a869fa7925bb755b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShooterSpritePack/Sprites/PlayerDeath/SoldierDeath7.png using Guid(13bb546ba37a9bf4a869fa7925bb755b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ee48e4818f5ada8c79c8b9eb6d2a90c') in 0.014791 seconds 
+  Import took 0.018588 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000207 seconds.
+  path: Assets/ShooterSpritePack/Sprites/PlayerDeath/SoldierDeath2.png
+  artifactKey: Guid(c3b7a682fbf09244190235e02cebd880) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShooterSpritePack/Sprites/PlayerDeath/SoldierDeath2.png using Guid(c3b7a682fbf09244190235e02cebd880) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b757663bbdda104a6bc89343a06eb04') in 0.012186 seconds 
+  Import took 0.015629 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000193 seconds.
+  path: Assets/ShooterSpritePack/Sprites/PlayerDeath/SoldierDeath9.png
+  artifactKey: Guid(3a0b1a1fa8cabed45a856116106400ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShooterSpritePack/Sprites/PlayerDeath/SoldierDeath9.png using Guid(3a0b1a1fa8cabed45a856116106400ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f95649df9ce1374306dd19701bac19f2') in 0.010322 seconds 
+  Import took 0.025807 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000234 seconds.
+  path: Assets/ShooterSpritePack/Sprites/PlayerDeath/SoldierDeath6.png
+  artifactKey: Guid(826f1db553c14d14287ad81bf72314af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShooterSpritePack/Sprites/PlayerDeath/SoldierDeath6.png using Guid(826f1db553c14d14287ad81bf72314af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '154c6a59d72644c6889a998514c0530c') in 0.013346 seconds 
+  Import took 0.016495 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000176 seconds.
+  path: Assets/ShooterSpritePack/Sprites/PlayerDeath/SoldierDeath4.png
+  artifactKey: Guid(bd019c15df5566a42b07d07d4bd549fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShooterSpritePack/Sprites/PlayerDeath/SoldierDeath4.png using Guid(bd019c15df5566a42b07d07d4bd549fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb53c7095cce74b889e2d481c25ac896') in 0.010187 seconds 
+  Import took 0.013984 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000184 seconds.
+  path: Assets/ShooterSpritePack/Sprites/PlayerDeath/SoldierDeath11.png
+  artifactKey: Guid(4c393a3a7786e8f41a16aee8f8c7bf16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShooterSpritePack/Sprites/PlayerDeath/SoldierDeath11.png using Guid(4c393a3a7786e8f41a16aee8f8c7bf16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '447882aac309fce71d3efbd6bf23ebde') in 0.012697 seconds 
+  Import took 0.016258 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000162 seconds.
+  path: Assets/ShooterSpritePack/Sprites/PlayerDeath/SoldierDeath10.png
+  artifactKey: Guid(11c515b8b4e544249994cca4ffcf732a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShooterSpritePack/Sprites/PlayerDeath/SoldierDeath10.png using Guid(11c515b8b4e544249994cca4ffcf732a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '272e89cf07273f9a65888db8c85b4777') in 0.013669 seconds 
+  Import took 0.017074 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000243 seconds.
+  path: Assets/ShooterSpritePack/Sprites/PlayerDeath/SoldierDeath12.png
+  artifactKey: Guid(9d34c4468b1ef5f4ba426d02599e0314) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShooterSpritePack/Sprites/PlayerDeath/SoldierDeath12.png using Guid(9d34c4468b1ef5f4ba426d02599e0314) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3202d12a150eb25ed2bab940a08f9d17') in 0.010672 seconds 
+  Import took 0.014096 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000146 seconds.
+  path: Assets/ShooterSpritePack/Sprites/PlayerDeath/SoldierDeath8.png
+  artifactKey: Guid(89e5473797453b142b947c8f18bb5a1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShooterSpritePack/Sprites/PlayerDeath/SoldierDeath8.png using Guid(89e5473797453b142b947c8f18bb5a1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3d22cb3f76d52cac3463770b5e008a4') in 0.013227 seconds 
+  Import took 0.016529 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000235 seconds.
+  path: Assets/ShooterSpritePack/Sprites/PlayerDeath/SoldierDeath13.png
+  artifactKey: Guid(8fad5f5a06505fa45b9c990aa9ad6fd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShooterSpritePack/Sprites/PlayerDeath/SoldierDeath13.png using Guid(8fad5f5a06505fa45b9c990aa9ad6fd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c14db3119e185491776cb61c14a2b116') in 0.016453 seconds 
+  Import took 0.019835 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000166 seconds.
+  path: Assets/ShooterSpritePack/Sprites/PlayerDeath/SoldierDeath5.png
+  artifactKey: Guid(96e6c64bd7ae8da4aaf7dd99c18dc728) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShooterSpritePack/Sprites/PlayerDeath/SoldierDeath5.png using Guid(96e6c64bd7ae8da4aaf7dd99c18dc728) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a633753557007bd89fa2863fe445b44') in 0.013206 seconds 
+  Import took 0.016711 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 17.306455 seconds.
+  path: Assets/ShooterSpritePack/Sprites/PlayerExplode/SoldierExplode0.png
+  artifactKey: Guid(c6318c423e2ac0040b98d0f1203a0835) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShooterSpritePack/Sprites/PlayerExplode/SoldierExplode0.png using Guid(c6318c423e2ac0040b98d0f1203a0835) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0832729ac8faa594f0fc2da0c03c48b3') in 0.010986 seconds 
+  Import took 0.014593 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000221 seconds.
+  path: Assets/ShooterSpritePack/Sprites/PlayerExplode/SoldierExplode8.png
+  artifactKey: Guid(91eadce7dd0ad2740838b5624ac96b1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShooterSpritePack/Sprites/PlayerExplode/SoldierExplode8.png using Guid(91eadce7dd0ad2740838b5624ac96b1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2e0e4a3fbc6ee8a60b4cb3bc36afbe7') in 0.015122 seconds 
+  Import took 0.018391 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000221 seconds.
+  path: Assets/ShooterSpritePack/Sprites/PlayerExplode/SoldierExplode3.png
+  artifactKey: Guid(6615e91c653999b4484c4c1f8994c5e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShooterSpritePack/Sprites/PlayerExplode/SoldierExplode3.png using Guid(6615e91c653999b4484c4c1f8994c5e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '107af09f2ef6ff68499d1051ad6f9070') in 0.012015 seconds 
+  Import took 0.015129 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000228 seconds.
+  path: Assets/ShooterSpritePack/Sprites/PlayerExplode/SoldierExplode2.png
+  artifactKey: Guid(a49cac72ebf6e4e4bb13858085b1f26b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShooterSpritePack/Sprites/PlayerExplode/SoldierExplode2.png using Guid(a49cac72ebf6e4e4bb13858085b1f26b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd66fe2aa8ba79baec04403cb0234ed0') in 0.010995 seconds 
+  Import took 0.014383 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000243 seconds.
+  path: Assets/ShooterSpritePack/Sprites/PlayerExplode/SoldierExplode1.png
+  artifactKey: Guid(fbac92f9bca503d44b0f3f44e68dac48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShooterSpritePack/Sprites/PlayerExplode/SoldierExplode1.png using Guid(fbac92f9bca503d44b0f3f44e68dac48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4418db967de4aa6c7e4ad556c099f24') in 0.010433 seconds 
+  Import took 0.013705 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000156 seconds.
+  path: Assets/ShooterSpritePack/Sprites/PlayerExplode/SoldierExplode5.png
+  artifactKey: Guid(2237c0b7027adc94abff533648332a06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShooterSpritePack/Sprites/PlayerExplode/SoldierExplode5.png using Guid(2237c0b7027adc94abff533648332a06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad837096ecc742ab8a4147d32df87e39') in 0.010709 seconds 
+  Import took 0.024520 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000222 seconds.
+  path: Assets/ShooterSpritePack/Sprites/PlayerExplode/SoldierExplode6.png
+  artifactKey: Guid(e65081a7cddb8884cb2e657cd20a23b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShooterSpritePack/Sprites/PlayerExplode/SoldierExplode6.png using Guid(e65081a7cddb8884cb2e657cd20a23b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99e98068d3b5603268cb3890ae9eaedf') in 0.012150 seconds 
+  Import took 0.015264 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000218 seconds.
+  path: Assets/ShooterSpritePack/Sprites/PlayerExplode/SoldierExplode10.png
+  artifactKey: Guid(03fce8c734905bb4da5c5eb01212fcbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShooterSpritePack/Sprites/PlayerExplode/SoldierExplode10.png using Guid(03fce8c734905bb4da5c5eb01212fcbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0eec0e8c11cb28ddf1a91b1564814343') in 0.013071 seconds 
+  Import took 0.016294 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000103 seconds.
+  path: Assets/ShooterSpritePack/Sprites/PlayerExplode/SoldierExplode7.png
+  artifactKey: Guid(07963ae08628eb0498e8b0c09d473f63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShooterSpritePack/Sprites/PlayerExplode/SoldierExplode7.png using Guid(07963ae08628eb0498e8b0c09d473f63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68b8f0c593c37f248ba1f2a352bec4e3') in 0.013165 seconds 
+  Import took 0.016662 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000198 seconds.
+  path: Assets/ShooterSpritePack/Sprites/PlayerExplode/SoldierExplode9.png
+  artifactKey: Guid(ca03d361da53d2741bce092b27941d54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShooterSpritePack/Sprites/PlayerExplode/SoldierExplode9.png using Guid(ca03d361da53d2741bce092b27941d54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4db0f769e686e93cafb63d92cc34f600') in 0.014463 seconds 
+  Import took 0.018014 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000199 seconds.
+  path: Assets/ShooterSpritePack/Sprites/PlayerExplode/SoldierExplode4.png
+  artifactKey: Guid(f270302d54f803a48974a791877e8085) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShooterSpritePack/Sprites/PlayerExplode/SoldierExplode4.png using Guid(f270302d54f803a48974a791877e8085) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6f3bb7f36dfc9e86d78f4df7ed48207') in 0.012913 seconds 
+  Import took 0.016112 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000228 seconds.
+  path: Assets/ShooterSpritePack/Sprites/PlayerExplode/SoldierExplode11.png
+  artifactKey: Guid(3fa97de195231784bbad231e6a08d993) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShooterSpritePack/Sprites/PlayerExplode/SoldierExplode11.png using Guid(3fa97de195231784bbad231e6a08d993) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1bfd3f97a33702ffecfc66c8e8b96cb') in 0.011579 seconds 
+  Import took 0.014905 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.882905 seconds.
+  path: Assets/ShooterSpritePack/Trenches/Ground.png
+  artifactKey: Guid(4552154f45a65934eb9e3d5297481d80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShooterSpritePack/Trenches/Ground.png using Guid(4552154f45a65934eb9e3d5297481d80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6cfcc6bef0e6b61fe13d6b32707da4a3') in 0.011809 seconds 
+  Import took 0.015715 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000251 seconds.
+  path: Assets/ShooterSpritePack/Trenches/TrenchWideStraight.png
+  artifactKey: Guid(283254d953324344c8e07c0874b7965b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShooterSpritePack/Trenches/TrenchWideStraight.png using Guid(283254d953324344c8e07c0874b7965b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '485ffba0b7a5521323ff9a45f3f2d42d') in 0.021482 seconds 
+  Import took 0.024469 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000239 seconds.
+  path: Assets/ShooterSpritePack/Trenches/TrenchMud.png
+  artifactKey: Guid(50a10807fe955fa409f2de59dd7e06ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShooterSpritePack/Trenches/TrenchMud.png using Guid(50a10807fe955fa409f2de59dd7e06ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a75331ab70c504682c1573702367996e') in 0.010839 seconds 
+  Import took 0.042596 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000222 seconds.
+  path: Assets/ShooterSpritePack/Trenches/TrenchStraight.png
+  artifactKey: Guid(a83e8e6c17bd0724b9c4cd374e4337fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShooterSpritePack/Trenches/TrenchStraight.png using Guid(a83e8e6c17bd0724b9c4cd374e4337fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93e2aab3bd8c6a7cec045103731010ba') in 0.015655 seconds 
+  Import took 0.018652 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000240 seconds.
+  path: Assets/ShooterSpritePack/Trenches/TrenchCorner.png
+  artifactKey: Guid(90a68f90eab96d540a6a071f4b4f50e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShooterSpritePack/Trenches/TrenchCorner.png using Guid(90a68f90eab96d540a6a071f4b4f50e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7f3e76e2e74d10baa08e18db0f6eb96') in 0.012597 seconds 
+  Import took 0.015677 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000233 seconds.
+  path: Assets/ShooterSpritePack/Trenches/Sandbags.png
+  artifactKey: Guid(a44079d38ee17e54d882648b2935d169) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShooterSpritePack/Trenches/Sandbags.png using Guid(a44079d38ee17e54d882648b2935d169) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ac2ddc952aea2430b2d2a526a470ac2') in 0.019381 seconds 
+  Import took 0.022875 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 38.816637 seconds.
+  path: Assets/ShooterSpritePack/Sprites/PlayerCover/SoldierCover0.png
+  artifactKey: Guid(bec3057aa8fd99243a8ad4d04cce3a98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShooterSpritePack/Sprites/PlayerCover/SoldierCover0.png using Guid(bec3057aa8fd99243a8ad4d04cce3a98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b44ac5c660f8df5bee0b9169be5a13cc') in 0.014351 seconds 
+  Import took 0.018617 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000263 seconds.
+  path: Assets/ShooterSpritePack/Sprites/PlayerCover/SoldierCover8.png
+  artifactKey: Guid(8356988442af13c49ac7fac14142f052) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShooterSpritePack/Sprites/PlayerCover/SoldierCover8.png using Guid(8356988442af13c49ac7fac14142f052) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03b2dc18af9f5e7235b4cc21f1316ee0') in 0.015519 seconds 
+  Import took 0.019912 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000322 seconds.
+  path: Assets/ShooterSpritePack/Sprites/PlayerCover/SoldierCover2.png
+  artifactKey: Guid(ef4687a9493ebdb46894058c47b0cb0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShooterSpritePack/Sprites/PlayerCover/SoldierCover2.png using Guid(ef4687a9493ebdb46894058c47b0cb0c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '991c957285fb44764e97079a7ece91d8') in 0.013373 seconds 
+  Import took 0.017662 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000195 seconds.
+  path: Assets/ShooterSpritePack/Sprites/PlayerCover/SoldierCover4.png
+  artifactKey: Guid(2482d6143118bd44798e08e75181573d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShooterSpritePack/Sprites/PlayerCover/SoldierCover4.png using Guid(2482d6143118bd44798e08e75181573d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37d703fbbecf56cd9c1178b0d5b52a0a') in 0.016181 seconds 
+  Import took 0.019858 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000166 seconds.
+  path: Assets/ShooterSpritePack/Sprites/PlayerCover/SoldierCover7.png
+  artifactKey: Guid(6f1c76eba7a25914c9813d6cdd7ee40b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShooterSpritePack/Sprites/PlayerCover/SoldierCover7.png using Guid(6f1c76eba7a25914c9813d6cdd7ee40b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6c6a40fa6ebd0c1cec850533b50d8b7') in 0.010736 seconds 
+  Import took 0.013855 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000155 seconds.
+  path: Assets/ShooterSpritePack/Sprites/PlayerCover/SoldierCover9.png
+  artifactKey: Guid(5118ae0941a36674ca770e5f608761fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShooterSpritePack/Sprites/PlayerCover/SoldierCover9.png using Guid(5118ae0941a36674ca770e5f608761fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25cc6ad76f1c7db69b980465640b770a') in 0.011310 seconds 
+  Import took 0.014527 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000186 seconds.
+  path: Assets/ShooterSpritePack/Sprites/PlayerCover/SoldierCover5.png
+  artifactKey: Guid(e79fb257541114349a9ba9f5e4fcd02a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShooterSpritePack/Sprites/PlayerCover/SoldierCover5.png using Guid(e79fb257541114349a9ba9f5e4fcd02a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20f006616be5a009ac7bf1ac54bd6a00') in 0.014641 seconds 
+  Import took 0.018265 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000163 seconds.
+  path: Assets/ShooterSpritePack/Sprites/PlayerCover/SoldierCover6.png
+  artifactKey: Guid(4569449cea126c34f99312c20fbcb687) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShooterSpritePack/Sprites/PlayerCover/SoldierCover6.png using Guid(4569449cea126c34f99312c20fbcb687) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ec58f887f737e765771623f0541e7ad') in 0.013459 seconds 
+  Import took 0.016705 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000140 seconds.
+  path: Assets/ShooterSpritePack/Sprites/PlayerCover/SoldierCover1.png
+  artifactKey: Guid(ca073a1bc17f4fa4685c35074a9f1e2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShooterSpritePack/Sprites/PlayerCover/SoldierCover1.png using Guid(ca073a1bc17f4fa4685c35074a9f1e2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b47ec2e7a6f87bfdd60c46b1493897ea') in 0.014397 seconds 
+  Import took 0.017567 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000165 seconds.
+  path: Assets/ShooterSpritePack/Sprites/PlayerCover/SoldierCover3.png
+  artifactKey: Guid(73a70571f9e4342478fbe565bb0e0652) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShooterSpritePack/Sprites/PlayerCover/SoldierCover3.png using Guid(73a70571f9e4342478fbe565bb0e0652) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8fad198f333c54267b2c90dfdf10fab1') in 0.013599 seconds 
+  Import took 0.016855 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.161260 seconds.
+  path: Assets/ShooterSpritePack/Sprites/PlayerDeath/SoldierDeath0.png
+  artifactKey: Guid(85984bd487ae86642a9c5b1447c2904c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ShooterSpritePack/Sprites/PlayerDeath/SoldierDeath0.png using Guid(85984bd487ae86642a9c5b1447c2904c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7a27ea479b639d2cc3a519d8294cb54') in 0.009486 seconds 
+  Import took 0.012856 seconds .
+
