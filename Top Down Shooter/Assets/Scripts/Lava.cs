@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class Lava : MonoBehaviour
 {
+
     public GameObject Player;
 
-    void OnTriggerEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.Equals(Player))
         {
-            Destroy(collision.gameObject);
+            Destroy(Player);
         }
     }
+
 }
