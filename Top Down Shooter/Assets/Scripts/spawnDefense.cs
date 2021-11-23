@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class spawnDefense : MonoBehaviour
-{
+{/*
     void OnTriggerEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("EnemyBullet"))
@@ -16,5 +16,5 @@ public class spawnDefense : MonoBehaviour
             Destroy(collision.gameObject);
         if (collision.gameObject.CompareTag("Bullet"))
             Destroy(collision.gameObject);
-    }
+    }*/
 }

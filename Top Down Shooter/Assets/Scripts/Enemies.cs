@@ -20,8 +20,9 @@ public class Enemies : Lives
     {
         if (collision.gameObject.CompareTag("Bullet")) enemyLives--;
         if (collision.gameObject.CompareTag("Bullet")) Destroy(collision.gameObject);
-        if (enemyLives == 0)
+        if (enemyLives <= 0)
         {
+            SoundController.enemyDied.Invoke();
             Destroy(this.gameObject);
         }
     }
