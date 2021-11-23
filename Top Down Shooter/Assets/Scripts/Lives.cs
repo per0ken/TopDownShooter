@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class Lives : MonoBehaviour
 {
-    protected float enemyLives = 3;
+    public static float enemyLives = 3;
 }

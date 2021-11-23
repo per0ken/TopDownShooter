@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemies : Lives
+public class Enemies : MonoBehaviour
 {
     public Rigidbody2D rb;
-    private float tillPlaySound;
     public GameObject Player;
+    public static int lives = 3;
 
     private float movementDuration = 2.0f;
     private float waitBeforeMoving = 2.0f;
@@ -16,14 +16,12 @@ public class Enemies : Lives
     void Start()
     {
         Player = GameObject.Find("Player");
-        tillPlaySound = 3;
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Bullet")) tillPlaySound--;
-        if (collision.gameObject.CompareTag("Bullet")) enemyLives--;
+        if (collision.gameObject.CompareTag("Bullet")) lives--;
         if (collision.gameObject.CompareTag("Bullet")) Destroy(collision.gameObject);
-        if (enemyLives == 0)
+        if (lives == 0)
         {
             Destroy(this.gameObject);
         }
