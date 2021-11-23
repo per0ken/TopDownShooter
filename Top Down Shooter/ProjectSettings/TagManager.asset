@@ -7,6 +7,7 @@ TagManager:
   - asd
   - Bullet
   - EnemyBullet
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -43,4 +44,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: bullets
+    uniqueID: 1996360477
     locked: 0
