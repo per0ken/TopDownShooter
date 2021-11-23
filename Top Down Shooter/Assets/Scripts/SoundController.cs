@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SoundController : MonoBehaviour
+public class SoundController : Lives
 {
     public AudioSource[] soundFX;
 
@@ -12,7 +12,7 @@ public class SoundController : MonoBehaviour
         {
             soundFX[0].Play();
         }
-        if (Enemies.lives == 0)
+        if (enemyLives == 0)
         {
             soundFX[1].Play();
         }
