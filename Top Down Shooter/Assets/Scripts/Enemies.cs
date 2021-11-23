@@ -16,10 +16,10 @@ public class Enemies : Lives
     {
         Player = GameObject.Find("Player");
     }
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collision.gameObject.CompareTag("Bullet")) enemyLives--;
-        if (collision.gameObject.CompareTag("Bullet")) Destroy(collision.gameObject);
+        if (collider.gameObject.CompareTag("Bullet")) enemyLives--;
+        if (collider.gameObject.CompareTag("Bullet")) Destroy(collider.gameObject);
         if (enemyLives <= 0)
         {
             SoundController.enemyDied.Invoke();

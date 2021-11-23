@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class bulletScript : MonoBehaviour
 {
-    Collider ObjectCollider;
+    CapsuleCollider2D ObjectCollider;
 
     private void Start()
     {
-        ObjectCollider = GetComponent<Collider>();
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
+        ObjectCollider = GetComponent<CapsuleCollider2D>();
+    }/*
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("EnemyBullet")) ObjectCollider.isTrigger = true;
     }
@@ -18,5 +18,5 @@ public class bulletScript : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("EnemyBullet")) ObjectCollider.isTrigger = false;
-    }
+    }*/
 }
