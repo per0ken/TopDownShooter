@@ -12,11 +12,31 @@ public class PlayerController : MonoBehaviour
     Vector2 movement;
     Vector2 mousePos;
 
+    Health myHealth;
+    int shotCount = 0;
+
+    private void Start()
+    {
+        myHealth = GetComponent<Health>();
+    }
+
+    private void OnEnable()
+    {
+        shotCount = 0;
+    }
+
     public float lives = 3;
     void OnTriggerEnter2D(Collider2D collision)
     {
         //if (collision.gameObject.CompareTag("EnemyBullet")) lives--;
-        if (collision.gameObject.CompareTag("EnemyBullet")) Destroy(collision.gameObject);
+        if (collision.gameObject.CompareTag("EnemyBullet"))
+        {
+            Destroy(collision.gameObject);
+            shotCount++;
+            if(shotCount % 3 == 0)
+                myHealth.ReduceLife();
+        }
+
         if (lives==0) Destroy(this.gameObject);
     }
 

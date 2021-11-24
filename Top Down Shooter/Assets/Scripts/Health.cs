@@ -2,49 +2,50 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using System;
 
 public class Health : MonoBehaviour
 {
-    public float hearts;
-    public int numOfHearts;
+    public int numOfHearts = 3;
 
-    public Image[] heartimages;
-    public Sprite fullHeart;
-    public Sprite emptyheart;
+    public Image[] fullHeartImages;
+    public Image[] empytHeartImages;
 
+    // Start method is called on Application start (but if we will have multiple rounds) we need OnEnable
+    void OnEnable() => PerformInitSetup();
 
-    void Start()
+    public void ReduceLife()
     {
-        hearts = 3;
-        numOfHearts = 3;
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        
-        if (hearts > numOfHearts)
+        numOfHearts--;
+        if (numOfHearts <= 0)
         {
-            hearts = numOfHearts;
+            //SceneManager.LoadScene("GameOver"); TODO: Enable this code, whenever GameOver scene created, and added to Build scenes
+            Debug.Log("Game is Over!");
         }
 
-        for (int i =0;i<heartimages.Length;i++)
+        for (int i = fullHeartImages.Length - 1; i >= 0; i--)
         {
-            if (i < hearts)
+            if(fullHeartImages[i].isActiveAndEnabled) // if there are any full lives remaining active
             {
-                heartimages[i].sprite = fullHeart;
+                fullHeartImages[i].gameObject.SetActive(false);
+                empytHeartImages[i].gameObject.SetActive(true);
+                return;
             }
-            else
-            {
-                heartimages[i].sprite = emptyheart;
-            }
-            if (i < numOfHearts)
-            {
-                heartimages[i].enabled = true;
-            }
-            else
-            {
-                heartimages[i].enabled = false;
-            }
+        }
+    }
+
+    private void PerformInitSetup()
+    {
+        numOfHearts = 3;
+        foreach (Image hearthImage in fullHeartImages)
+        {
+            hearthImage.gameObject.SetActive(true);
+        }
+
+        foreach (Image hearthImage in empytHeartImages)
+        {
+            hearthImage.gameObject.SetActive(false);
         }
     }
 }
