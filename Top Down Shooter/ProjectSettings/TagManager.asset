@@ -9,6 +9,7 @@ TagManager:
   - EnemyBullet
   - Enemy
   - Rock
+  - Bush
   layers:
   - Default
   - TransparentFX
