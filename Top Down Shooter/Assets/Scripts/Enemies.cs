@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemies : Lives
 {
     public Rigidbody2D rb;
-    public GameObject Player;
+    private GameObject Player;
 
     private float movementDuration = 2.0f;
     private float waitBeforeMoving = 2.0f;
@@ -22,14 +22,18 @@ public class Enemies : Lives
 
     private Animator mAnimator; //robbanásanimáció
 
+    private RuntimeAnimatorController soldierExplodeController;
 
-
-    void Start()
+    void OnEnable()
     {
         Player = GameObject.Find("Player");
+        rb = GetComponent<Rigidbody2D>();
+        soldierExplodeController = Resources.Load<RuntimeAnimatorController>("MySoldierExplodeAnim");
         ObjectCollider = GetComponent<BoxCollider2D>();
         mAnimator = GetComponent<Animator>(); //getanimator
-        this.GetComponent<Animator>().runtimeAnimatorController = Instantiate(Resources.Load("SoldierExplode7")) as RuntimeAnimatorController;
+        RuntimeAnimatorController thisController = Instantiate(soldierExplodeController);
+        if(thisController != null)
+            mAnimator.runtimeAnimatorController = thisController;
         //a fenti sor ráállytja az animatior component animator controllerjére a SoldierExplode7-et
     }
     void OnTriggerEnter2D(Collider2D collider)

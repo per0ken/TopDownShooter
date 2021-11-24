@@ -26,6 +26,7 @@ public class enemyShooting : Enemies
         timer += Time.deltaTime;
         if(timer > spawnTimeInternal)
         {
+            canShoot = true;
             Shoot();
             spawnTimeInternal = Random.Range(minTime, maxTime);
             timer = 0;
