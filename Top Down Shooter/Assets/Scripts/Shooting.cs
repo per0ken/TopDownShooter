@@ -15,7 +15,6 @@ public class Shooting : MonoBehaviour
         {
             Shoot();
         }
-
     }
 
 

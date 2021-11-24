@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     Vector2 movement;
     Vector2 mousePos;
 
-    public int lives = 3;
+    public float lives = 3;
     void OnTriggerEnter2D(Collider2D collision)
     {
         //if (collision.gameObject.CompareTag("EnemyBullet")) lives--;
