@@ -28,13 +28,12 @@ public class PlayerController : MonoBehaviour
     public float lives = 3;
     void OnTriggerEnter2D(Collider2D collision)
     {
-        //if (collision.gameObject.CompareTag("EnemyBullet")) lives--;
         if (collision.gameObject.CompareTag("EnemyBullet"))
         {
+            //lives--;
             Destroy(collision.gameObject);
-            shotCount++;
-            if(shotCount % 3 == 0)
-                myHealth.ReduceLife();
+            shotCount++;       
+            myHealth.ReduceLife();
         }
 
         if (lives==0) Destroy(this.gameObject);

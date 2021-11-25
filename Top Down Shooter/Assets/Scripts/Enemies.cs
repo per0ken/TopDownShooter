@@ -7,9 +7,19 @@ public class Enemies : Lives
     public Rigidbody2D rb;
     private GameObject Player;
 
-    private float movementDuration = 2.0f;
-    private float waitBeforeMoving = 2.0f;
-    private bool Arrived = false;
+    /* private float movementDuration = 2.0f;
+     private float waitBeforeMoving = 2.0f;
+     private bool Arrived = false;*/
+
+    private float speed = 5.0f;
+    private float waitTime;
+    public float startWaitTime = 0.75f;
+
+    public Vector2 moveSpot;
+    public float minX = -10.0f;
+    public float maxX = 10.0f;
+    public float minY = -5.0f;
+    public float maxY = 4.0f;
 
     protected bool canExplode = true;
     protected bool canPlaySound = true;
@@ -24,6 +34,7 @@ public class Enemies : Lives
 
     private RuntimeAnimatorController soldierExplodeController;
 
+
     void OnEnable()
     {
         Player = GameObject.Find("Player");
@@ -32,7 +43,9 @@ public class Enemies : Lives
         ObjectCollider = GetComponent<BoxCollider2D>();
         mAnimator = GetComponent<Animator>(); //getanimator
         RuntimeAnimatorController thisController = Instantiate(soldierExplodeController);
-        if(thisController != null)
+        waitTime = startWaitTime;
+        moveSpot = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
+        if (thisController != null)
             mAnimator.runtimeAnimatorController = thisController;
         //a fenti sor ráállytja az animatior component animator controllerjére a SoldierExplode7-et
     }
@@ -50,26 +63,48 @@ public class Enemies : Lives
             canShoot = false;
             ObjectCollider.isTrigger = true;
         }
-        if (collider.CompareTag("Bush"))
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Bush"))
             ObjectCollider.isTrigger = true;
     }
-    void OnTriggerExit2D(Collider2D collider)
+
+    private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collider.CompareTag("Bush"))
-        {
+        if (collision.gameObject.CompareTag("Bush"))
             ObjectCollider.isTrigger = false;
-            Debug.Log("isTrigger set to false");
-        }
     }
 
         private void Update()
     {
-        if (!Arrived)
+        /*if (!Arrived)
         {
             Arrived = true;
             int randomX = Random.Range(-10, 10);
             int randomY = Random.Range(4, -5);
             StartCoroutine(MoveToPoint(new Vector2(randomX,randomY)));
+        }*/
+
+        if (canMove == true)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, moveSpot, speed * Time.deltaTime);
+            if (Vector2.Distance(transform.position, moveSpot) < 0.6f || // nem kap új irányt hiába megy közel a kövekhez
+                Vector2.Distance(transform.position, rockThree.Three.position) < 0.8f ||
+                Vector2.Distance(transform.position, rockTwo.Two.position) < 0.8f ||
+                Vector2.Distance(transform.position, rockOne.One.position) < 0.8f)
+            {
+                if (waitTime <= 0)
+                {
+                    moveSpot = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
+                    waitTime = startWaitTime;
+                }
+                else
+                {
+                    waitTime -= Time.deltaTime;
+                }
+            }
         }
 
     }
@@ -85,7 +120,7 @@ public class Enemies : Lives
         }
     }
 
-    private IEnumerator MoveToPoint(Vector2 targetPos)
+   /* private IEnumerator MoveToPoint(Vector2 targetPos)
     {
         float timer = 0.0f;
         Vector3 startPos = transform.position;
@@ -105,7 +140,7 @@ public class Enemies : Lives
 
         yield return new WaitForSeconds(waitBeforeMoving);
         Arrived = false;
-    }
+    }*/
 
     void Explosion()
     {

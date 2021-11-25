@@ -9,10 +9,12 @@ public class SoundController : MonoBehaviour
     public AudioSource[] soundFX;
 
     public static UnityEvent enemyDied = new UnityEvent();
+    public static UnityEvent playerShot = new UnityEvent();
 
     private void Start()
     {
         enemyDied.AddListener(PlayEnemyDieSound);
+        playerShot.AddListener(PlayerShoot);
     }
 
     private void PlayEnemyDieSound()
@@ -20,11 +22,8 @@ public class SoundController : MonoBehaviour
         soundFX[1].Play();
     }
 
-    private void Update()
+    void PlayerShoot()
     {
-        if(Input.GetButtonDown("Fire1"))
-        {
-            soundFX[0].Play();
-        }
+        soundFX[0].Play();
     }
 }

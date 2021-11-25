@@ -24,7 +24,7 @@ public class Health : MonoBehaviour
             Debug.Log("Game is Over!");
         }
 
-        for (int i = fullHeartImages.Length - 1; i >= 0; i--)
+        for (int i = fullHeartImages.Length -1; i >= 0; i--)
         {
             if(fullHeartImages[i].isActiveAndEnabled) // if there are any full lives remaining active
             {

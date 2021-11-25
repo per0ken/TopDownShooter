@@ -103,7 +103,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyLives: 3
   rb: {fileID: -2793459323272989941}
-  Player: {fileID: 0}
+  startWaitTime: 0.75
+  moveSpot: {x: 0, y: 0}
+  minX: -10
+  maxX: 10
+  minY: -5
+  maxY: 4
 --- !u!50 &-2793459323272989941
 Rigidbody2D:
   serializedVersion: 4
@@ -163,6 +168,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f09c903a41c5ef4a8736228cd0e461d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyLives: 3
+  rb: {fileID: 0}
+  startWaitTime: 0.75
+  moveSpot: {x: 0, y: 0}
+  minX: -10
+  maxX: 10
+  minY: -5
+  maxY: 4
   firePoint: {fileID: 3297620889752596726}
   bulletPrefab: {fileID: 3563471673946120636, guid: fc3c50f3e695490418d8553974e46f51, type: 3}
   spawnTimeInternal: 0

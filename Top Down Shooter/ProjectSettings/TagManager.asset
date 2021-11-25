@@ -10,6 +10,7 @@ TagManager:
   - Enemy
   - Rock
   - Bush
+  - MoveSpot
   layers:
   - Default
   - TransparentFX

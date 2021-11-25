@@ -5,7 +5,7 @@ public class RandomSpawner : MonoBehaviour
     public GameObject enemyPrefab;
     Transform spawn;
 
-    private float minTime = 2.0f;
+    private float minTime = 2.5f;
     private float maxTime = 4.0f;
 
     public float spawnTimeInternal;
@@ -59,20 +59,20 @@ public class RandomSpawner : MonoBehaviour
     Vector2 GetRandomTop()
     {
         int randomX = Random.Range(-13, 13);
-        int randomY = Random.Range(5, 7);
+        int randomY = Random.Range(7, 9);
         return new Vector2(randomX, randomY);
     }
 
     Vector2 GetRandomLeft()
     {
-        int randomX = Random.Range(-13, -11);
+        int randomX = Random.Range(-15, -13);
         int randomY = Random.Range(7, -7);
         return new Vector2(randomX, randomY);
     }
 
     Vector2 GetRandomRight()
     {
-        int randomX = Random.Range(11, 13);
+        int randomX = Random.Range(13, 15);
         int randomY = Random.Range(7, -7);
         return new Vector2(randomX, randomY);
     }
