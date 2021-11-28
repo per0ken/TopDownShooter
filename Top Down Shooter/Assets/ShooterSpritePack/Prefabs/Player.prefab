@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 1346931737}
   - component: {fileID: 1346931738}
   - component: {fileID: 1346931739}
+  - component: {fileID: 1430359207}
   m_Layer: 0
   m_Name: Player
   m_TagString: asd
@@ -155,7 +156,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 1000
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -178,7 +179,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 1346931737}
   cam: {fileID: 0}
-  lives: 3
+  currentScore: 0
+  SCORE_STEP: 100
+  gameUIController: {fileID: 0}
+  enemyKilled:
+    m_PersistentCalls:
+      m_Calls: []
+  enemiesKilled: []
 --- !u!114 &1346931739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,3 +201,24 @@ MonoBehaviour:
   firePoint: {fileID: 299823292}
   bulletPrefab: {fileID: 3563471673946120636, guid: 1aa97d6060239d841ba993b5a389e0e9, type: 3}
   bulletForce: 20
+--- !u!114 &1430359207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6860716014184721761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25d452ec3b75b0f4fab650ffc8186a6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numOfHearts: 3
+  fullHeartImages:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  empytHeartImages:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

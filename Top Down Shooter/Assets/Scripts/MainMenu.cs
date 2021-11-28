@@ -5,20 +5,21 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEditor;
 
-public class MainMenu : MonoBehaviour
+public class MainMenu : UIController
 {
-    [Header("UI Screen Panels")]
-    [SerializeField] GameObject defaultPanel;
+    [Header("UI Screen Panels")] // Ezek csak ilyen szép header-ök az Inspectorban :;
+    [SerializeField] GameObject defaultPanel; // SerializeField azt jelenti, hogy megjelenik és assignolható az Inspectorban, viszont nem public más osztályok felé (vagyis másik kódból nem módosítható)
     [SerializeField] GameObject settingsPanel;
     [SerializeField] GameObject scoresPanel;
     [SerializeField] GameObject aboutPanel;
 
     [Header("Volume Controll")]
     [SerializeField] Slider volumeSlider;
-    [SerializeField] Sprite muteSprite;
-    [SerializeField] Sprite unmuteSprite;
 
-    bool isMute;
+    [Header("Score Board UI")]
+    [SerializeField] Text scoreKillText;
+    [SerializeField] Text noScoreKillText;
+    [SerializeField] Button deleteHistoryButton;
 
     void OnEnable()
     {
@@ -53,11 +54,6 @@ public class MainMenu : MonoBehaviour
         }
     }
 
-    public void PlayGame()
-    {
-        SceneManager.LoadScene("Game");
-    }
-
     public void OpenMainMenuDefaultScreen()
     {
         var success = CloseAllPanels();
@@ -77,6 +73,7 @@ public class MainMenu : MonoBehaviour
         var success = CloseAllPanels();
         if (success)
             scoresPanel.SetActive(true);
+        SetupScoreBoard();
     }
 
     public void OpenAboutScreen()
@@ -84,6 +81,12 @@ public class MainMenu : MonoBehaviour
         var success = CloseAllPanels();
         if (success)
             aboutPanel.SetActive(true);
+    }
+
+    public void DeleteHistory()
+    {
+        PlayerPrefs.DeleteAll();
+        SetupScoreBoard();
     }
 
     internal bool CloseAllPanels()
@@ -97,52 +100,29 @@ public class MainMenu : MonoBehaviour
         return true;
     }
 
-    public void QuitGame()
+    internal void SetupScoreBoard()
     {
-#if UNITY_EDITOR
-        EditorApplication.isPlaying = false;
-#else
-        Application.Quit();
-#endif
-    }
+        if (scoreKillText == null || noScoreKillText == null)
+            return;
+        
+        int latestScore = PlayerPrefs.GetInt("latestScore", 0);
+        int latestKill = latestScore / 100;
 
-    public void SetVolume(float volume)
-    {
-        AudioListener.volume = volume;
-        PlayerPrefs.SetFloat("volume", volume);
-    }
+        int hiScore = PlayerPrefs.GetInt("hiScore", 0);
+        int hiKill = latestScore / 100;
 
-    public void Mute(GameObject caller)
-    {
-        isMute = !isMute;
-        if (PlayerPrefs.GetInt("isMuted") == 0)
+        if(latestScore == 0 || hiScore == 0)
         {
-            PlayerPrefs.SetInt("isMuted", 1);
+            noScoreKillText.gameObject.SetActive(true);
+            scoreKillText.gameObject.SetActive(false);
+            deleteHistoryButton.gameObject.SetActive(false);
         }
         else
         {
-            PlayerPrefs.SetInt("isMuted", 0);
-        }
-        if (isMute)
-        {
-            PlayerPrefs.SetFloat("volumeBeforeMute", AudioListener.volume);
-            AudioListener.volume = 0.0f;
-            PlayerPrefs.SetFloat("volume", 0.0f);
-            caller.GetComponent<Image>().sprite = unmuteSprite;
-        }
-        else
-        {
-            if (PlayerPrefs.GetFloat("volumeBeforeMute") != 0.0f)
-            {
-                AudioListener.volume = PlayerPrefs.GetFloat("volumeBeforeMute");
-                PlayerPrefs.SetFloat("volume", AudioListener.volume);
-            }
-            else
-            {
-                AudioListener.volume = 1.0f;
-                PlayerPrefs.SetFloat("volume", 1.0f);
-            }
-            caller.GetComponent<Image>().sprite = muteSprite;
+            noScoreKillText.gameObject.SetActive(false);
+            scoreKillText.gameObject.SetActive(true);
+            scoreKillText.text = "YOUR RECORD:\n" + hiKill + " KILLS / " + hiScore + " POINTS\n\nYOU LAST KILLED: " + latestKill + " ENEMIES\nGOT " + latestScore + " POINTS";
+            deleteHistoryButton.gameObject.SetActive(true);
         }
     }
 }

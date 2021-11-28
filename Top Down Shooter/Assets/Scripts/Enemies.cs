@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
+using UnityEngine.Events;
 
-public class Enemies : Lives
+public class Enemies : MonoBehaviour
 {
     public Rigidbody2D rb;
     private GameObject Player;
+    private PlayerController playerController;
 
     /* private float movementDuration = 2.0f;
      private float waitBeforeMoving = 2.0f;
@@ -34,10 +37,16 @@ public class Enemies : Lives
 
     private RuntimeAnimatorController soldierExplodeController;
 
+    private Vector3 myLatestNewPosition;
+
+    private NavMeshAgent navMeshAgent;
+
+    public float enemyLives = 3;
 
     void OnEnable()
     {
         Player = GameObject.Find("Player");
+        playerController = Player?.GetComponent<PlayerController>();
         rb = GetComponent<Rigidbody2D>();
         soldierExplodeController = Resources.Load<RuntimeAnimatorController>("MySoldierExplodeAnim");
         ObjectCollider = GetComponent<BoxCollider2D>();
@@ -48,23 +57,45 @@ public class Enemies : Lives
         if (thisController != null)
             mAnimator.runtimeAnimatorController = thisController;
         //a fenti sor ráállytja az animatior component animator controllerjére a SoldierExplode7-et
+        navMeshAgent = GetComponent<NavMeshAgent>();
+        navMeshAgent.Warp(transform.position);
+        navMeshAgent.updateRotation = false;
+        navMeshAgent.updateUpAxis = false;
+        ManageMovement();
     }
-    void OnTriggerEnter2D(Collider2D collider)
+    
+    void Update()
+    {
+        if(Vector3.Distance(myLatestNewPosition, transform.position) <= 1)
+        {
+            ManageMovement();
+        }
+    }
+    
+    void ManageMovement()
+    {
+        myLatestNewPosition = GetRandomLocationNearPlayer();
+        navMeshAgent.SetDestination(myLatestNewPosition);
+    }
+
+    void OnTriggerExit2D(Collider2D collider)
     {
         if (collider.gameObject.CompareTag("Bullet")) enemyLives--;
         if (collider.gameObject.CompareTag("Bullet")) Destroy(collider.gameObject);
-        if (enemyLives <= 0)
+        if (enemyLives == 0)
         {
+            playerController.enemyKilled.Invoke(collider.GetHashCode());
             SoundEffect(); //robbanáshang
             Explosion(); //robbanásanimáció
             Destroy(this.gameObject,1.5f); //törli a szétrobbant objectet 1.5 mp után, de elõtte még mozog és újra lejátssza a robbanáshangot és az animációt is pedig nem lövök rá
             canMove = false;
             canLook = false;
             canShoot = false;
-            ObjectCollider.isTrigger = true;
+            //if(ObjectCollider != null)
+                //ObjectCollider.isTrigger = true;
         }
     }
-
+    
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Bush"))
@@ -76,8 +107,8 @@ public class Enemies : Lives
         if (collision.gameObject.CompareTag("Bush"))
             ObjectCollider.isTrigger = false;
     }
-
-        private void Update()
+    /*
+    private void Update()
     {
         /*if (!Arrived)
         {
@@ -87,7 +118,7 @@ public class Enemies : Lives
             StartCoroutine(MoveToPoint(new Vector2(randomX,randomY)));
         }*/
 
-        if (canMove == true)
+        /*if (canMove == true)
         {
             transform.position = Vector2.MoveTowards(transform.position, moveSpot, speed * Time.deltaTime);
             if (Vector2.Distance(transform.position, moveSpot) < 0.6f || // nem kap új irányt hiába megy közel a kövekhez
@@ -107,10 +138,13 @@ public class Enemies : Lives
             }
         }
 
-    }
+    }*/
 
     void FixedUpdate()
     {
+        if (Player == null)
+            return;
+
         Vector2 Playerr = Player.transform.position;
         Vector2 lookDir = Playerr - rb.position;
         if (canLook == true)
@@ -144,6 +178,9 @@ public class Enemies : Lives
 
     void Explosion()
     {
+        if (mAnimator == null)
+            return;
+
         if (canExplode == true)
         {
             mAnimator.SetTrigger("TrExplode");
@@ -160,4 +197,6 @@ public class Enemies : Lives
             canPlaySound = false;
         }
     }
+
+    Vector3 GetRandomLocationNearPlayer() => new Vector3(Player.transform.position.x + Random.Range(3f, 4.5f), Player.transform.position.y + Random.Range(3f, 4.5f), Player.transform.position.z + Random.Range(3f, 4.5f));
 }

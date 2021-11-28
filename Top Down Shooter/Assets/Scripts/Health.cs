@@ -20,8 +20,7 @@ public class Health : MonoBehaviour
         numOfHearts--;
         if (numOfHearts <= 0)
         {
-            //SceneManager.LoadScene("GameOver"); TODO: Enable this code, whenever GameOver scene created, and added to Build scenes
-            Debug.Log("Game is Over!");
+            GameOver();
         }
 
         for (int i = fullHeartImages.Length -1; i >= 0; i--)
@@ -33,6 +32,12 @@ public class Health : MonoBehaviour
                 return;
             }
         }
+    }
+
+    public static void GameOver()
+    {
+        Debug.Log("Game is Over!");
+        SceneManager.LoadScene("GameOver");
     }
 
     private void PerformInitSetup()

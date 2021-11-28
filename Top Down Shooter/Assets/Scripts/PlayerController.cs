@@ -1,6 +1,7 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerController : MonoBehaviour
 {
@@ -14,31 +15,45 @@ public class PlayerController : MonoBehaviour
 
     Health myHealth;
     int shotCount = 0;
+    public int currentScore = 0;
+    public int SCORE_STEP = 100;
+
+    public GameUIController gameUIController;
+
+    public UnityEvent<int> enemyKilled = new UnityEvent<int>();
+
+    public List<int> enemiesKilled = new List<int>();
 
     private void Start()
     {
         myHealth = GetComponent<Health>();
+        enemyKilled.AddListener(OnEnemyKill);
     }
 
-    private void OnEnable()
+    private void OnEnemyKill(int killedEnemy)
     {
-        shotCount = 0;
+        if (enemiesKilled.Contains(killedEnemy))
+            return;
+        enemiesKilled.Add(killedEnemy);
+        currentScore += SCORE_STEP;
+        gameUIController.UpdateScore(currentScore);
+        PlayerPrefs.SetInt("latestScore", currentScore);
+        if (PlayerPrefs.GetInt("hiScore", 0) < currentScore)
+            PlayerPrefs.SetInt("hiScore", currentScore);
     }
 
-    public float lives = 3;
+    private void OnEnable() => shotCount = 0;
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("EnemyBullet"))
         {
-            //lives--;
             Destroy(collision.gameObject);
-            shotCount++;       
-            myHealth.ReduceLife();
+            shotCount++;
+            if(shotCount % 3 == 0)
+                myHealth.ReduceLife();
         }
-
-        if (lives==0) Destroy(this.gameObject);
     }
-
 
     // Update is called once per frame
     void Update()
@@ -49,9 +64,6 @@ public class PlayerController : MonoBehaviour
 
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
     }
-
-    
-
 
     void FixedUpdate()
     {
