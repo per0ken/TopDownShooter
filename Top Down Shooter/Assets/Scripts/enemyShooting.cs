@@ -26,7 +26,6 @@ public class enemyShooting : Enemies
         timer += Time.deltaTime;
         if(timer > spawnTimeInternal)
         {
-            canShoot = true;
             Shoot();
             spawnTimeInternal = Random.Range(minTime, maxTime);
             timer = 0;
@@ -38,6 +37,7 @@ public class enemyShooting : Enemies
         if (canShoot == true)
         {
             GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+            SoundController.enemyShot.Invoke();
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
             rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
             Object.Destroy(bullet, 1.5f);

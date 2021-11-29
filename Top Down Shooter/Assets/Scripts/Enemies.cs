@@ -14,21 +14,24 @@ public class Enemies : MonoBehaviour
      private float waitBeforeMoving = 2.0f;
      private bool Arrived = false;*/
 
-    private float speed = 5.0f;
-    private float waitTime;
-    public float startWaitTime = 0.75f;
+    //private float speed = 5.0f;
+    // private float waitTime;
+    // public float startWaitTime = 0.75f;
 
-    public Vector2 moveSpot;
-    public float minX = -10.0f;
-    public float maxX = 10.0f;
-    public float minY = -5.0f;
-    public float maxY = 4.0f;
+    //public Vector2 moveSpot;
+    Vector3 deadPosition;
+    protected bool dead = false;
+    public float minX = -9.5f;
+    public float maxX = 9.5f;
+    public float minY = -4.6f;
+    public float maxY = 3.5f;
+    private float timer = 0.0f;
 
     protected bool canExplode = true;
     protected bool canPlaySound = true;
     protected bool canMove = true;
     protected bool canLook = true;
-    protected bool canShoot = false;
+    protected bool canShoot = true;
     //a boolok azért vannak hogy egyszer tudjon animációt lejátszani a halott enemy és ne tudjon mozogni illetve a playerre nézni, 1 boollal nem engedte
 
     BoxCollider2D ObjectCollider; //bemegyek a mapba, utána megakad a dolgokba ha MoveTowards alapú lesz a mozgása
@@ -52,8 +55,8 @@ public class Enemies : MonoBehaviour
         ObjectCollider = GetComponent<BoxCollider2D>();
         mAnimator = GetComponent<Animator>(); //getanimator
         RuntimeAnimatorController thisController = Instantiate(soldierExplodeController);
-        waitTime = startWaitTime;
-        moveSpot = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
+        //waitTime = startWaitTime;
+        //moveSpot = new Vector2(Random.Range(minX, maxX), Random.Range(minY, maxY));
         if (thisController != null)
             mAnimator.runtimeAnimatorController = thisController;
         //a fenti sor ráállytja az animatior component animator controllerjére a SoldierExplode7-et
@@ -66,9 +69,20 @@ public class Enemies : MonoBehaviour
     
     void Update()
     {
-        if(Vector3.Distance(myLatestNewPosition, transform.position) <= 1)
+        if (dead == true)
+            transform.position = deadPosition;
+
+        if (canMove == true)
         {
-            ManageMovement();
+            timer += Time.deltaTime;
+            if (timer > 3)
+            {
+                ManageMovement();
+                timer = 0;
+            }
+            // {
+            //    ManageMovement();
+            //}
         }
     }
     
@@ -78,12 +92,15 @@ public class Enemies : MonoBehaviour
         navMeshAgent.SetDestination(myLatestNewPosition);
     }
 
-    void OnTriggerExit2D(Collider2D collider)
+    void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.gameObject.CompareTag("Bullet")) enemyLives--;
         if (collider.gameObject.CompareTag("Bullet")) Destroy(collider.gameObject);
         if (enemyLives == 0)
         {
+            dead = true;
+            deadPosition = transform.position;
+            ObjectCollider.isTrigger = true;
             playerController.enemyKilled.Invoke(collider.GetHashCode());
             SoundEffect(); //robbanáshang
             Explosion(); //robbanásanimáció
@@ -198,5 +215,5 @@ public class Enemies : MonoBehaviour
         }
     }
 
-    Vector3 GetRandomLocationNearPlayer() => new Vector3(Player.transform.position.x + Random.Range(3f, 4.5f), Player.transform.position.y + Random.Range(3f, 4.5f), Player.transform.position.z + Random.Range(3f, 4.5f));
+    Vector3 GetRandomLocationNearPlayer() => new Vector3(Random.Range(minX,maxX), Random.Range(minY,maxY) + Random.Range(0,0));
 }

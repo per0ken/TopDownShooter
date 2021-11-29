@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using Random = UnityEngine.Random;
 
 public class PlayerController : MonoBehaviour
 {
@@ -9,6 +10,10 @@ public class PlayerController : MonoBehaviour
 
     public Rigidbody2D rb;
     public Camera cam;
+
+    public GameObject healthPrefab;
+    public float timer;
+    public float spawnTimeInternal = 2;
 
     Vector2 movement;
     Vector2 mousePos;
@@ -50,8 +55,13 @@ public class PlayerController : MonoBehaviour
         {
             Destroy(collision.gameObject);
             shotCount++;
-            if(shotCount % 3 == 0)
-                myHealth.ReduceLife();
+            //if(shotCount % 3 == 0)
+                //myHealth.ReduceLife();
+        }
+        if (collision.gameObject.CompareTag("Life"))
+        {
+            myHealth.RaiseLife();
+            Destroy(collision.gameObject);
         }
     }
 
@@ -63,6 +73,14 @@ public class PlayerController : MonoBehaviour
         movement.Normalize();
 
         mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+
+        timer += Time.deltaTime;
+        if (timer > spawnTimeInternal)
+        {
+            lifeSpawn();
+            spawnTimeInternal = Random.Range(20, 30);
+            timer = 0;
+        }
     }
 
     void FixedUpdate()
@@ -80,4 +98,45 @@ public class PlayerController : MonoBehaviour
                                          Mathf.Clamp(transform.position.y, minScreenBounds.y + 1, maxScreenBounds.y - 1),
                                          transform.position.z);*/
     }
+
+
+    void lifeSpawn()
+    {
+        int randomFunction = Random.Range(0, 2);
+        if (randomFunction == 0)
+        {
+            GameObject lifeSpawn = Instantiate(healthPrefab, GetRandomLeft(), Quaternion.Euler(new Vector3(0, 0, 0)));
+        }
+        if (randomFunction == 1)
+        {
+            GameObject lifeSpawn = Instantiate(healthPrefab, GetRandomMiddle(), Quaternion.Euler(new Vector3(0, 0, 0)));
+        }
+        if (randomFunction == 2)
+        {
+            GameObject lifeSpawn = Instantiate(healthPrefab, GetRandomLeft(), Quaternion.Euler(new Vector3(0, 0, 0)));
+        }
+    }
+
+    Vector2 GetRandomLeft()
+    {
+
+        float randomX = Random.Range(-9.5f, -5);
+        float randomY = Random.Range(-4.7f, -3.7f);
+        return new Vector2(randomX, randomY);
+    }
+
+    Vector2 GetRandomMiddle()
+    {
+        float randomX = Random.Range(-3.3f, 1.4f);
+        float randomY = Random.Range(-4.7f, -3.7f);
+        return new Vector2(randomX, randomY);
+    }
+
+    Vector2 GetRandomRight()
+    {
+        float randomX = Random.Range(4.7f, 9.4f);
+        float randomY = Random.Range(-4.7f, -3.7f);
+        return new Vector2(randomX, randomY);
+    }
 }
+

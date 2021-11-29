@@ -12,6 +12,7 @@ TagManager:
   - Bush
   - MoveSpot
   - GameUIController
+  - Life
   layers:
   - Default
   - TransparentFX

@@ -7,16 +7,20 @@ using System;
 
 public class Health : MonoBehaviour
 {
-    public int numOfHearts = 3;
+    private int numOfHearts = 5;
+    private bool immortal = false;
 
     public Image[] fullHeartImages;
-    public Image[] empytHeartImages;
+    public Image[] emptyHeartImages;
 
     // Start method is called on Application start (but if we will have multiple rounds) we need OnEnable
     void OnEnable() => PerformInitSetup();
 
     public void ReduceLife()
     {
+        if (immortal == false)
+        {
+
         numOfHearts--;
         if (numOfHearts <= 0)
         {
@@ -28,13 +32,32 @@ public class Health : MonoBehaviour
             if(fullHeartImages[i].isActiveAndEnabled) // if there are any full lives remaining active
             {
                 fullHeartImages[i].gameObject.SetActive(false);
-                empytHeartImages[i].gameObject.SetActive(true);
+                emptyHeartImages[i].gameObject.SetActive(true);
                 return;
             }
         }
+
+        }
     }
 
-    public static void GameOver()
+    public void RaiseLife()
+    {
+        if (numOfHearts<5)
+        numOfHearts++;
+
+            for (int i = 0; i<= fullHeartImages.Length - 1; i++)
+            {
+                if (emptyHeartImages[i].isActiveAndEnabled) // if there are any empty lives remaining active
+                {
+                    fullHeartImages[i].gameObject.SetActive(true);
+                    emptyHeartImages[i].gameObject.SetActive(false);
+                    return;
+                }
+            }
+        
+    }
+
+        public static void GameOver()
     {
         Debug.Log("Game is Over!");
         SceneManager.LoadScene("GameOver");
@@ -42,13 +65,13 @@ public class Health : MonoBehaviour
 
     private void PerformInitSetup()
     {
-        numOfHearts = 3;
+        numOfHearts = 5;
         foreach (Image hearthImage in fullHeartImages)
         {
             hearthImage.gameObject.SetActive(true);
         }
 
-        foreach (Image hearthImage in empytHeartImages)
+        foreach (Image hearthImage in emptyHeartImages)
         {
             hearthImage.gameObject.SetActive(false);
         }

@@ -5,8 +5,8 @@ public class RandomSpawner : MonoBehaviour
     public GameObject enemyPrefab;
     Transform spawn;
 
-    private float minTime = 2.5f;
-    private float maxTime = 4.0f;
+    private float minTime = 1.0f;
+    private float maxTime = 2.0f;
 
     public float spawnTimeInternal;
     private float timer;

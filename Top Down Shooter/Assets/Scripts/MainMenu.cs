@@ -109,7 +109,7 @@ public class MainMenu : UIController
         int latestKill = latestScore / 100;
 
         int hiScore = PlayerPrefs.GetInt("hiScore", 0);
-        int hiKill = latestScore / 100;
+        int hiKill = hiScore / 100;
 
         if(latestScore == 0 || hiScore == 0)
         {
