@@ -13,6 +13,7 @@ TagManager:
   - MoveSpot
   - GameUIController
   - Life
+  - Immortal
   layers:
   - Default
   - TransparentFX

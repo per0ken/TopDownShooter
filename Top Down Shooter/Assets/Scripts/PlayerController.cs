@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using Random = UnityEngine.Random;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : Shooting
 {
     float movementSpeed = 4f;
 
@@ -12,8 +12,11 @@ public class PlayerController : MonoBehaviour
     public Camera cam;
 
     public GameObject healthPrefab;
+    public GameObject immortalPrefab;
     public float timer;
-    public float spawnTimeInternal = 2;
+    public float immortaltime;
+    public float spawnTimeInternal = 5;
+    public float immortalTimer = 30;
 
     Vector2 movement;
     Vector2 mousePos;
@@ -52,15 +55,23 @@ public class PlayerController : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("EnemyBullet"))
-        {
+            if (IsImmortal == false)
+            {
             Destroy(collision.gameObject);
             shotCount++;
             //if(shotCount % 3 == 0)
-                //myHealth.ReduceLife();
+               // myHealth.ReduceLife();
         }
         if (collision.gameObject.CompareTag("Life"))
         {
+            SoundController.healthAdd.Invoke();
             myHealth.RaiseLife();
+            Destroy(collision.gameObject);
+        }
+        if (collision.gameObject.CompareTag("Immortal"))
+        {
+            SoundController.immortalOn.Invoke();
+            IsImmortal = true;
             Destroy(collision.gameObject);
         }
     }
@@ -78,8 +89,16 @@ public class PlayerController : MonoBehaviour
         if (timer > spawnTimeInternal)
         {
             lifeSpawn();
-            spawnTimeInternal = Random.Range(20, 30);
+            spawnTimeInternal = Random.Range(15, 20);
             timer = 0;
+        }
+
+        immortaltime += Time.deltaTime;
+        if (immortaltime > immortalTimer)
+        {
+            immortalSpawn();
+            immortalTimer = Random.Range(30, 40);
+            immortaltime = 0;
         }
     }
 
@@ -114,6 +133,23 @@ public class PlayerController : MonoBehaviour
         if (randomFunction == 2)
         {
             GameObject lifeSpawn = Instantiate(healthPrefab, GetRandomLeft(), Quaternion.Euler(new Vector3(0, 0, 0)));
+        }
+    }
+
+    void immortalSpawn()
+    {
+        int randomFunction = Random.Range(0, 2);
+        if (randomFunction == 0)
+        {
+            GameObject immortalSpawn = Instantiate(immortalPrefab, GetRandomLeft(), Quaternion.Euler(new Vector3(0, 0, 0)));
+        }
+        if (randomFunction == 1)
+        {
+            GameObject immortalSpawn = Instantiate(immortalPrefab, GetRandomMiddle(), Quaternion.Euler(new Vector3(0, 0, 0)));
+        }
+        if (randomFunction == 2)
+        {
+            GameObject immortalSpawn = Instantiate(immortalPrefab, GetRandomLeft(), Quaternion.Euler(new Vector3(0, 0, 0)));
         }
     }
 

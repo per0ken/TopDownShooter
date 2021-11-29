@@ -95,12 +95,12 @@ public class Enemies : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.gameObject.CompareTag("Bullet")) enemyLives--;
-        if (collider.gameObject.CompareTag("Bullet")) Destroy(collider.gameObject);
+        if(enemyLives>0)
+            if (collider.gameObject.CompareTag("Bullet")) Destroy(collider.gameObject);
         if (enemyLives == 0)
         {
             dead = true;
             deadPosition = transform.position;
-            ObjectCollider.isTrigger = true;
             playerController.enemyKilled.Invoke(collider.GetHashCode());
             SoundEffect(); //robbanáshang
             Explosion(); //robbanásanimáció

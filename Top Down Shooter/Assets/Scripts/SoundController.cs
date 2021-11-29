@@ -7,31 +7,20 @@ using UnityEngine.Events;
 public class SoundController : MonoBehaviour
 {
     public AudioSource[] soundFX;
-    public float timer;
 
     public static UnityEvent enemyDied = new UnityEvent();
     public static UnityEvent playerShot = new UnityEvent();
     public static UnityEvent enemyShot = new UnityEvent();
+    public static UnityEvent healthAdd = new UnityEvent();
+    public static UnityEvent immortalOn = new UnityEvent();
 
     private void Start()
     {
         enemyDied.AddListener(PlayEnemyDieSound);
         playerShot.AddListener(PlayerShoot);
         enemyShot.AddListener(enemyShoot);
-    }
-
-    private void OnEnable()
-    {
-        soundFX[2].Play();
-    }
-
-    private void Update()
-    {
-        timer += Time.deltaTime;
-        if (timer > 185)
-        {
-            soundFX[2].Play();
-        }
+        healthAdd.AddListener(healthPickUp);
+        immortalOn.AddListener(immortalPickUp);
     }
 
     private void PlayEnemyDieSound()
@@ -48,5 +37,16 @@ public class SoundController : MonoBehaviour
     {
         soundFX[0].Play();
     }
+
+    void healthPickUp()
+    {
+        soundFX[2].Play();
+    }
+    void immortalPickUp()
+    {
+        soundFX[3].Play();
+    }
+
+
 }
 
