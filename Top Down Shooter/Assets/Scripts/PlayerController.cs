@@ -18,6 +18,8 @@ public class PlayerController : Shooting
     public float spawnTimeInternal = 5;
     public float immortalTimer = 30;
 
+    public Shooting Immortal;
+
     Vector2 movement;
     Vector2 mousePos;
 
@@ -36,6 +38,7 @@ public class PlayerController : Shooting
     {
         myHealth = GetComponent<Health>();
         enemyKilled.AddListener(OnEnemyKill);
+        Immortal.GetComponent<Shooting>();
     }
 
     private void OnEnemyKill(int killedEnemy)
@@ -71,7 +74,7 @@ public class PlayerController : Shooting
         if (collision.gameObject.CompareTag("Immortal"))
         {
             SoundController.immortalOn.Invoke();
-            IsImmortal = true;
+            Immortal.changeBool();
             Destroy(collision.gameObject);
         }
     }

@@ -23,7 +23,7 @@ public class Shooting : MonoBehaviour
                 Shoot();
             }
         }
-        if (IsImmortal == false)
+        if (IsImmortal == true)
         {
             disabletimer += Time.deltaTime;
             if (disabletimer > disableAfter)
@@ -41,6 +41,12 @@ public class Shooting : MonoBehaviour
                 Object.Destroy(bullet, 1.5f);
             }
         }
+    }
+
+    public void changeBool()
+    {
+        if (IsImmortal == false)
+            IsImmortal = true;   
     }
 
 

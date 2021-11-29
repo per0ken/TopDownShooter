@@ -8,7 +8,6 @@ using System;
 public class Health : MonoBehaviour
 {
     private int numOfHearts = 5;
-    private bool immortal = false;
 
     public Image[] fullHeartImages;
     public Image[] emptyHeartImages;
@@ -18,9 +17,6 @@ public class Health : MonoBehaviour
 
     public void ReduceLife()
     {
-        if (immortal == false)
-        {
-
         numOfHearts--;
         if (numOfHearts <= 0)
         {
@@ -35,8 +31,6 @@ public class Health : MonoBehaviour
                 emptyHeartImages[i].gameObject.SetActive(true);
                 return;
             }
-        }
-
         }
     }
 
