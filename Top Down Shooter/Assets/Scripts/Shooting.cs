@@ -43,7 +43,7 @@ public class Shooting : MonoBehaviour
         }
     }
 
-    public void changeBool()
+    public void enableImmortality()
     {
         if (IsImmortal == false)
             IsImmortal = true;   

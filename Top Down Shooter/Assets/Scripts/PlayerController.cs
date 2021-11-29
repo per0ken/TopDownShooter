@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using Random = UnityEngine.Random;
 
-public class PlayerController : Shooting
+public class PlayerController : MonoBehaviour
 {
     float movementSpeed = 4f;
 
@@ -38,7 +38,7 @@ public class PlayerController : Shooting
     {
         myHealth = GetComponent<Health>();
         enemyKilled.AddListener(OnEnemyKill);
-        Immortal.GetComponent<Shooting>();
+        Immortal = GetComponent<Shooting>();
     }
 
     private void OnEnemyKill(int killedEnemy)
@@ -58,7 +58,7 @@ public class PlayerController : Shooting
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("EnemyBullet"))
-            if (IsImmortal == false)
+            if (Immortal.IsImmortal == false)
             {
             Destroy(collision.gameObject);
             shotCount++;
@@ -74,7 +74,7 @@ public class PlayerController : Shooting
         if (collision.gameObject.CompareTag("Immortal"))
         {
             SoundController.immortalOn.Invoke();
-            Immortal.changeBool();
+            Immortal.enableImmortality();
             Destroy(collision.gameObject);
         }
     }
