@@ -100,16 +100,15 @@ public class PlayerController : Shooting
             immortalTimer = Random.Range(30, 40);
             immortaltime = 0;
         }
-    }
-
-    void FixedUpdate()
-    {
-       rb.MovePosition(rb.position + movement * movementSpeed * Time.fixedDeltaTime);
+        rb.MovePosition(rb.position + movement * movementSpeed * Time.fixedDeltaTime);
 
         Vector2 lookDir = mousePos - rb.position;
         float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
         rb.rotation = angle;
+    }
 
+    void FixedUpdate()
+    {
         /*Vector3 minScreenBounds = Camera.main.ScreenToWorldPoint(new Vector3(0, 0, 0));
         Vector3 maxScreenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
 

@@ -23,7 +23,7 @@ public class Shooting : MonoBehaviour
                 Shoot();
             }
         }
-        if (IsImmortal == true)
+        if (IsImmortal == false)
         {
             disabletimer += Time.deltaTime;
             if (disabletimer > disableAfter)
