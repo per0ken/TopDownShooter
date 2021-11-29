@@ -131,7 +131,7 @@ public class PlayerController : Shooting
         }
         if (randomFunction == 2)
         {
-            GameObject lifeSpawn = Instantiate(healthPrefab, GetRandomLeft(), Quaternion.Euler(new Vector3(0, 0, 0)));
+            GameObject lifeSpawn = Instantiate(healthPrefab, GetRandomRight(), Quaternion.Euler(new Vector3(0, 0, 0)));
         }
     }
 
@@ -148,29 +148,29 @@ public class PlayerController : Shooting
         }
         if (randomFunction == 2)
         {
-            GameObject immortalSpawn = Instantiate(immortalPrefab, GetRandomLeft(), Quaternion.Euler(new Vector3(0, 0, 0)));
+            GameObject immortalSpawn = Instantiate(immortalPrefab, GetRandomRight(), Quaternion.Euler(new Vector3(0, 0, 0)));
         }
     }
 
     Vector2 GetRandomLeft()
     {
 
-        float randomX = Random.Range(-9.5f, -5);
-        float randomY = Random.Range(-4.7f, -3.7f);
+        float randomX = Random.Range(-9.5f, -5.0f);
+        float randomY = Random.Range(-4.7f, 3.7f);
         return new Vector2(randomX, randomY);
     }
 
     Vector2 GetRandomMiddle()
     {
         float randomX = Random.Range(-3.3f, 1.4f);
-        float randomY = Random.Range(-4.7f, -3.7f);
+        float randomY = Random.Range(-4.7f, 3.7f);
         return new Vector2(randomX, randomY);
     }
 
     Vector2 GetRandomRight()
     {
         float randomX = Random.Range(4.7f, 9.4f);
-        float randomY = Random.Range(-4.7f, -3.7f);
+        float randomY = Random.Range(-4.7f, 3.7f);
         return new Vector2(randomX, randomY);
     }
 }
