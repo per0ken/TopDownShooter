@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     public float immortalTimer = 30;
 
     public Shooting Immortal;
+    public GameUIController Counting;
 
     Vector2 movement;
     Vector2 mousePos;
@@ -33,6 +34,7 @@ public class PlayerController : MonoBehaviour
     public UnityEvent<int> enemyKilled = new UnityEvent<int>();
 
     public List<int> enemiesKilled = new List<int>();
+
 
     private void Start()
     {
@@ -75,6 +77,7 @@ public class PlayerController : MonoBehaviour
         {
             SoundController.immortalOn.Invoke();
             Immortal.enableImmortality();
+            GameUIController.startCounting.Invoke();
             Destroy(collision.gameObject);
         }
     }
@@ -100,7 +103,7 @@ public class PlayerController : MonoBehaviour
         if (immortaltime > immortalTimer)
         {
             immortalSpawn();
-            immortalTimer = Random.Range(30, 40);
+            immortalTimer = Random.Range(45, 55);
             immortaltime = 0;
         }
         rb.MovePosition(rb.position + movement * movementSpeed * Time.fixedDeltaTime);
