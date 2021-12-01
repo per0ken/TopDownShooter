@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using System;
 
 public class GameUIController : UIController
 {
+    [Header("Game UI")]
     [SerializeField] Text scoreText;
     [SerializeField] Text immortalText;
     float timing = 15;
@@ -24,6 +26,7 @@ public class GameUIController : UIController
 
     public void UpdateImmortal(float newTime)
     {
+        newTime = (float)Math.Round(newTime, 1);
         immortalText.text = "IMMORTAL: " + (newTime).ToString();
         Debug.Log(newTime);
         if (timing < 0)
@@ -39,7 +42,7 @@ public class GameUIController : UIController
         if (startCount == true)
         {
             timing -= Time.fixedDeltaTime;
-            if(timing % 0.1 ==0) UpdateImmortal(timing);
+            if((int)(Math.Round(timing, 1) % 0.1) ==0) UpdateImmortal(timing);
             if (timing < 0)
             {
                 startCount = false;
