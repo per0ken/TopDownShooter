@@ -42,7 +42,7 @@ public class GameUIController : UIController
         if (startCount == true)
         {
             timing -= Time.fixedDeltaTime;
-            if((int)(Math.Round(timing, 1) % 0.1) ==0) UpdateImmortal(timing);
+            if((int)(Math.Round(timing, 1) % 0.1) ==0) UpdateImmortal(timing % 60);
             if (timing < 0)
             {
                 startCount = false;
