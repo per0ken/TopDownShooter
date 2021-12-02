@@ -7,10 +7,10 @@ public class enemyShooting : Enemies
     public Transform firePoint;
     public GameObject bulletPrefab;
 
-    private float bulletForce = 12.5f;
+    private float bulletForce = 12.0f;
 
     private float minTime = 2.0f;
-    private float maxTime = 3.5f;
+    private float maxTime = 4.5f;
 
     public float spawnTimeInternal;
 

@@ -6,7 +6,7 @@ public class RandomSpawner : MonoBehaviour
     Transform spawn;
 
     private float minTime = 1.5f;
-    private float maxTime = 1.5f;
+    private float maxTime = 2.0f;
 
     public float spawnTimeInternal;
     private float timer;
