@@ -8,7 +8,7 @@ public class Shooting : MonoBehaviour
     public GameObject bulletPrefab;
     public bool IsImmortal = false;
     public float disabletimer = 0.0f;
-    public float disableAfter = 14.9f;
+    public float disableAfter = 12.9f;
     private float timestamp = 0.0f;
     float perShotDelay = 0.05f;
 
