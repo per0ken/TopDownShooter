@@ -73,7 +73,7 @@ public class PlayerController : MonoBehaviour
             Destroy(collision.gameObject);
             shotCount++;
             //if(shotCount % 3 == 0)
-               myHealth.ReduceLife();
+               //myHealth.ReduceLife();
         }
         if (collision.gameObject.CompareTag("Life"))
         {
@@ -86,6 +86,7 @@ public class PlayerController : MonoBehaviour
             SoundController.immortalOn.Invoke();
             Immortal.enableImmortality();
             GameUIController.startCounting.Invoke();
+            RandomSpawner.moreSpawn.Invoke();
             Destroy(collision.gameObject);
         }
     }
