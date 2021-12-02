@@ -63,7 +63,7 @@ public class PlayerController : MonoBehaviour
         {
             if (Immortal.IsImmortal == false)
             {
-                Destroy(collision.gameObject);
+                Destroy(this.gameObject);
                 Health.GameOver();
             }
         }
@@ -73,7 +73,7 @@ public class PlayerController : MonoBehaviour
             Destroy(collision.gameObject);
             shotCount++;
             //if(shotCount % 3 == 0)
-               //myHealth.ReduceLife();
+               myHealth.ReduceLife();
         }
         if (collision.gameObject.CompareTag("Life"))
         {

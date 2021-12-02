@@ -41,7 +41,12 @@ public class RandomSpawner : MonoBehaviour
         {
             spawnTimer += Time.deltaTime;
             if (spawnTimer > 12)
+            {
+                spawnTimer = 0;
+                //spawnTimeInternal = Random.Range(minTime, maxTime);
                 spawningMore = false;
+                
+            }
             timer += Time.deltaTime;
             if (timer > spawnTimeInternal)
             {
