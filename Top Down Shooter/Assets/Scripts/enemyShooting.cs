@@ -10,7 +10,7 @@ public class enemyShooting : Enemies
     private float bulletForce = 12.0f;
 
     private float minTime = 2.0f;
-    private float maxTime = 4.5f;
+    private float maxTime = 3.5f;
 
     public float spawnTimeInternal;
 
