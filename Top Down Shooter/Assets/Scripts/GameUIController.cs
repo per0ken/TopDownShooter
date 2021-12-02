@@ -10,7 +10,7 @@ public class GameUIController : UIController
     [Header("Game UI")]
     [SerializeField] Text scoreText;
     [SerializeField] Text immortalText;
-    float timing = 24f;
+    float timing = 18f;
     public bool startCount = false;
 
     public static UnityEvent startCounting = new UnityEvent();

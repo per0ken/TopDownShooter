@@ -113,7 +113,7 @@ public class Enemies : MonoBehaviour
         }
     }
     
-    private void OnCollisionEnter2D(Collision2D collision)
+   /* private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Bush"))
             ObjectCollider.isTrigger = true;
@@ -123,7 +123,7 @@ public class Enemies : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Bush"))
             ObjectCollider.isTrigger = false;
-    }
+    }*/
     /*
     private void Update()
     {

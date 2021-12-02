@@ -14,11 +14,13 @@ public class enemyBulletControl : MonoBehaviour
     {
         if (collision.CompareTag("Rock"))
             ObjectCollider.isTrigger = false;
+        if (collision.CompareTag("Bush"))
+            Destroy(this.gameObject);
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("Bush"))
-            Destroy(this.gameObject);
+        if (collision.CompareTag("Rock"))
+            ObjectCollider.isTrigger = true;
     }
 }

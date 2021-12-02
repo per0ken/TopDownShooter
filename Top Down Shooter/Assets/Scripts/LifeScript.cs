@@ -5,7 +5,7 @@ using UnityEngine;
 public class LifeScript : MonoBehaviour
 {
     public float timer;
-    public int spawnTimeInternal = 7;
+    public int spawnTimeInternal = 10;
 
     // Update is called once per frame
     void Update()

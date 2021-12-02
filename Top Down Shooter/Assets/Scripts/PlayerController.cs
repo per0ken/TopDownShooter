@@ -59,13 +59,21 @@ public class PlayerController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("EnemyBullet"))
+        if (collision.gameObject.CompareTag("Lava"))
+        {
+            if (Immortal.IsImmortal == false)
+            {
+                Destroy(collision.gameObject);
+                Health.GameOver();
+            }
+        }
+            if (collision.gameObject.CompareTag("EnemyBullet"))
             if (Immortal.IsImmortal == false)
             {
             Destroy(collision.gameObject);
             shotCount++;
             //if(shotCount % 3 == 0)
-               myHealth.ReduceLife();
+               //myHealth.ReduceLife();
         }
         if (collision.gameObject.CompareTag("Life"))
         {

@@ -3668,18 +3668,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4714724134534950025, guid: 140bc3e2f36f2b841bb373e489846129, type: 3}
   m_PrefabInstance: {fileID: 3737040580728559211}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &656133504
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 656133503}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 271ab639af871824b89a0f7614ef6226, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &656133505
 Rigidbody2D:
   serializedVersion: 4
@@ -3735,6 +3723,10 @@ PrefabInstance:
     - target: {fileID: 4714724134534950025, guid: 140bc3e2f36f2b841bb373e489846129, type: 3}
       propertyPath: m_Name
       value: lava (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4714724134534950025, guid: 140bc3e2f36f2b841bb373e489846129, type: 3}
+      propertyPath: m_TagString
+      value: Lava
       objectReference: {fileID: 0}
     - target: {fileID: 4714724134534950025, guid: 140bc3e2f36f2b841bb373e489846129, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -4870,23 +4862,6 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 633c2969255078c4ca8027ce4ba882a3, type: 3}
---- !u!1 &910553385 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4714724134534950025, guid: 140bc3e2f36f2b841bb373e489846129, type: 3}
-  m_PrefabInstance: {fileID: 676147002}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &910553386
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 910553385}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 271ab639af871824b89a0f7614ef6226, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &961830959
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13436,6 +13411,10 @@ PrefabInstance:
     - target: {fileID: 4714724134534950025, guid: 140bc3e2f36f2b841bb373e489846129, type: 3}
       propertyPath: m_Name
       value: lava
+      objectReference: {fileID: 0}
+    - target: {fileID: 4714724134534950025, guid: 140bc3e2f36f2b841bb373e489846129, type: 3}
+      propertyPath: m_TagString
+      value: Lava
       objectReference: {fileID: 0}
     - target: {fileID: 4714724134534950025, guid: 140bc3e2f36f2b841bb373e489846129, type: 3}
       propertyPath: m_StaticEditorFlags
