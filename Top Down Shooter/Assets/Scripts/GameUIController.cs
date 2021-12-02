@@ -37,6 +37,7 @@ public class GameUIController : UIController
         }
     }
 
+    /*
     void Update()
     {
         if (startCount == true)
@@ -51,10 +52,25 @@ public class GameUIController : UIController
             }
         }
         
+    }*/
+
+    IEnumerator CountDown()
+    {
+        float counter = timing;
+        UpdateImmortal(counter);
+        while (counter > -0.1)
+        {
+            yield return new WaitForSecondsRealtime(0.1f);
+            Debug.LogError(counter);
+            UpdateImmortal(counter);
+            counter -= 0.1f;
+        }
+
     }
 
     public void OnImmortality()
     {
-        startCount = true;
+        //startCount = true;
+        StartCoroutine(CountDown());
     }
 }
