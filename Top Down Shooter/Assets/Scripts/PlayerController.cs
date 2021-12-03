@@ -73,7 +73,7 @@ public class PlayerController : MonoBehaviour
             Destroy(collision.gameObject);
             shotCount++;
             //if(shotCount % 3 == 0)
-               myHealth.ReduceLife();
+               //myHealth.ReduceLife();
         }
         if (collision.gameObject.CompareTag("Life"))
         {
